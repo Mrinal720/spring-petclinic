@@ -39,9 +39,8 @@ pipeline {
 
    stage ('Archiving artifacts'){
     steps{
-     junit stdioRetention: '', testResults: '**/surefire-reports/*.xml'
-     archiveArtifacts artifacts: '**/*.war', followSymlinks: false
-   }
+     junit stdioRetention: '', testResults: 'target/surefire-reports/*.xml'
+    }
   }
   }
   
