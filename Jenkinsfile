@@ -23,7 +23,7 @@ pipeline {
       triggers {
         cron('0 * * * *')
     }
-   parameters { choice(name: 'Build_Number', choices: ['clean', 'compile', 'clean package']} 
+   parameters { choice(name: 'goal', choices: ['clean', 'compile', 'clean package']} 
 
   stages{  
   stage ('Source code'){
